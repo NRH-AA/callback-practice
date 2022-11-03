@@ -35,8 +35,20 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 *******************************************************************************/
 
 function mySimpleReduce(array, cb) {
-  // Your code here
+    let acc = array[0];
+    for (let i = 1; i < array.length; i++) {
+      acc = cb(acc, array[i]);
+    }
+    return acc;
 }
+
+// function mySimpleReduce(array, cb, acc = 0) {
+//   let finalAcc = acc;
+//   for (let i = (finalAcc > 0 && 0 || finalAcc); i < array.length; i++) {
+//     acc = cb(acc, array[i]);
+//   }
+//   return acc;
+// }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {

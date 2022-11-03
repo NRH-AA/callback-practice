@@ -38,7 +38,13 @@ console.log(result6);   // true
 *******************************************************************************/
 
 function one(array, cb) {
-  // Your code here
+    let count = 0;
+    for (let index in array) {
+      let res = cb(array[index], Number(index));
+      if (res)  count++;
+    }
+
+    return count === 1;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
