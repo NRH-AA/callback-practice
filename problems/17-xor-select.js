@@ -35,8 +35,8 @@ let xorSelect = function(array, cb1, cb2) {
   let newArray = [];
     
   for (let value of array) {
-    let bool1 = cb1(value);
-    let bool2 = cb2(value);
+    let [bool1, bool2] = [cb1(value), cb2(value)];
+    
     if ((bool1 && !bool2) || (bool2 && !bool1)) {
       newArray.push(value);
     }

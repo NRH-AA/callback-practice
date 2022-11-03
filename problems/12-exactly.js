@@ -34,8 +34,7 @@ function exactly(array, num, cb) {
       if (cb(value)) countTrue++;
     }
     
-    if (countTrue === num) return true;
-    return false;
+    return countTrue === num;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

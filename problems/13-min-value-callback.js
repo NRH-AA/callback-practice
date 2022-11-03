@@ -17,9 +17,7 @@ function minValueCallback(array, cb) {
       if (value < smallest) smallest = value;
     }
     
-    if (cb !== undefined) return cb(smallest);
-    
-    return smallest;
+    return cb !== undefined && cb(smallest) || smallest;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
